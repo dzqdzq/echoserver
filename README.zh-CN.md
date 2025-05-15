@@ -11,7 +11,7 @@
 ## 安装
 
 ```bash
-npm install -g echoserver
+npm install -g hecho
 ```
 
 ## 使用方法

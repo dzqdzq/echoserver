@@ -1,5 +1,5 @@
 {
-  "name": "echo",
+  "name": "hecho",
   "version": "0.0.5",
   "description": "A simple echo server for debugging and logging across different environments",
   "author": "dzqdzq",
@@ -22,7 +22,8 @@
     "url": "https://github.com/dzqdzq/echo.git"
   },
   "bin": {
-    "echo": "bin/cmd.js"
+    "echo": "bin/cmd.js",
+    "hecho": "bin/cmd.js"
   },
   "license": "MIT",
   "dependencies": {

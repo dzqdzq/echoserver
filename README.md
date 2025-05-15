@@ -11,7 +11,7 @@ A simple cross-environment debugging and logging tool that supports remote loggi
 ## Installation
 
 ```bash
-npm install -g echoserver
+npm install -g hecho
 ```
 
 ## Usage
