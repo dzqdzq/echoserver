@@ -17,24 +17,24 @@ npm install -g hecho
 ## Usage
 ### Starting the Server
 ```bash
-echo server
+hecho server
 ```
 By default, the server will start on port 9191. You can change the default port by specifying a port number:
 
 ```bash
-echo server 8080
+hecho server 8080
 ```
 
 ### Client Usage
 #### Copy the client code to clipboard for pasting into your target environment
 ```bash
-echo client 
+hecho client 
 ```
 
 Or
 
 ```bash
-echo cli
+hecho cli
 ```
 
 - Default IP and port for the client

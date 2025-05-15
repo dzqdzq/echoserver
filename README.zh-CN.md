@@ -17,24 +17,24 @@ npm install -g hecho
 ## 使用方法
 ### 启动服务器
 ```bash
-echo server
+hecho server
 ```
 默认情况下，服务器将在端口9191上启动。您可以通过指定端口号来更改默认端口：
 
 ```bash
-echo server 8080
+hecho server 8080
 ```
 
 ### 客户端使用
 #### 拷贝客户端代码到剪切板, 后续粘贴到你要嵌入的地方
 ```bash
-echo client 
+hecho client 
 ```
 
 或
 
 ```bash
-echo cli
+hecho cli
 ```
 
 
