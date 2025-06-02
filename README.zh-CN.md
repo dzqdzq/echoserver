@@ -7,7 +7,7 @@
 ## 特点
 - 支持多种运行环境：Node.js、web、微信小程序， 或者其他应用程序支持js的场景。 
 - 如果你要破解的应用不支持js, 你可以使用AI智能体，让它翻译生成你的破解环境的请求代码。比如lua, python等
-
+- 支持微信小程序wx.login hook！
 ## 安装
 
 ```bash
@@ -36,26 +36,27 @@ hecho client
 ```bash
 hecho cli
 ```
-
-
+- 如果是微信小程序环境，将代码粘贴到开发者工具game.js第一行
+```bash
+hecho wxlogin
+```
+- 如果是微信小程序环境，将代码粘贴到真机环境game.js第一行
+```bash
+hecho wxclient
+```
 
 - 客户端默认的ip和端口
 ```bash
-(function hookConsole(ipPort){
+(function hookConsole(baseUrl, myhook){
     ...
-})({
-    ip: '127.0.0.1',
-    port: 9191
-});
+})("http://127.0.0.1:9191");
 ```
 
 - 如果你破解环境不支持ip访问，你可以自己设置url. 通过域名访问,域名设置为app受信任的域名， 然后反向代理(charles, proxyman etc)到你的服务器
 ```bash
-(function hookConsole(ipPort){
+(function hookConsole(baseUrl, myhook){
     ...
-})({
-    url: ': 'https://xxxx.xxxx.com/echo'
-});
+})('https://xxxx.xxxx.com/echo');
 ```
 
 ## 许可证

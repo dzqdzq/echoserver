@@ -1,6 +1,6 @@
 {
   "name": "hecho",
-  "version": "0.0.6",
+  "version": "1.0.1",
   "description": "A simple echo server for debugging and logging across different environments",
   "author": "dzqdzq",
   "main": "server.js",

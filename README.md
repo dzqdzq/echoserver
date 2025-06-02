@@ -7,6 +7,7 @@ A simple cross-environment debugging and logging tool that supports remote loggi
 ## Features
 - Supports multiple runtime environments: Node.js, web, WeChat Mini Program, or other scenarios where JavaScript is supported.
 - If the application you're trying to reverse engineer doesn't support JavaScript, you can use AI agents to translate and generate request code for your target environment, such as Lua, Python, etc.
+- Supports WeChat Mini Program wx.login hook!
 
 ## Installation
 
@@ -37,23 +38,28 @@ Or
 hecho cli
 ```
 
+- For WeChat Mini Program environment, paste the code into the first line of game.js in the developer tool
+```bash
+hecho wxlogin
+```
+
+- For WeChat Mini Program environment, paste the code into the first line of game.js in the real device environment
+```bash
+hecho wxclient
+```
+
 - Default IP and port for the client
 ```bash
-(function hookConsole(ipPort){
+(function hookConsole(baseUrl, myhook){
     ...
-})({  
-    ip: '127.0.0.1',
-    port: 9191
-});
+})("http://127.0.0.1:9191");
 ```
 
 - If your target environment doesn't support IP access, you can set a URL instead. Use a domain that is trusted by the app, then use reverse proxy (charles, proxyman etc.) to your server
 ```bash
-(function hookConsole(ipPort){
+(function hookConsole(baseUrl, myhook){
     ...
-})({  
-    url: 'https://xxxx.xxxx.com/echo'
-});
+})("https://xxxx.xxxx.com/echo");
 ```
 
 ## License
